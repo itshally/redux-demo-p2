@@ -4,6 +4,8 @@ import store from './components/redux/store'
 import CakeContainer from './components/CakeContainer';
 import HooksCakeContainer from './components/HooksCakeContainer';
 import IceCreamContainer from './components/IceCreamContainer';
+import NewCakeContainer from './components/NewCakeContainer';
+import ItemContainer from './components/ItemContainer';
 
 function App() {
   return (
@@ -22,6 +24,13 @@ function App() {
 
         <h3>Ice Cream Container</h3>
         <IceCreamContainer />
+
+        <h3>New Cake Container</h3>
+        <NewCakeContainer />
+
+        <h3>Item Container</h3>
+        <ItemContainer cake />
+        <ItemContainer iceCream />
       </div>
     </Provider>
   );
