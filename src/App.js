@@ -2,6 +2,8 @@ import './App.css';
 import { Provider } from 'react-redux'
 import store from './components/redux/store'
 import CakeContainer from './components/CakeContainer';
+import HooksCakeContainer from './components/HooksCakeContainer';
+import IceCreamContainer from './components/IceCreamContainer';
 
 function App() {
   return (
@@ -12,7 +14,14 @@ function App() {
      */
     <Provider store={store}>
       <div className="App">
+        <h3>Cake Container</h3>
         <CakeContainer />
+
+        <h3>Hooks Cake Container</h3>
+        <HooksCakeContainer />
+
+        <h3>Ice Cream Container</h3>
+        <IceCreamContainer />
       </div>
     </Provider>
   );

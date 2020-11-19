@@ -6,7 +6,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { buyCake } from '../components/redux'
+import { buyCake } from './redux'
 
 function CakeContainer(props) {
     return (
@@ -21,11 +21,14 @@ function CakeContainer(props) {
 
 /**
  * This function gets the redux state as a parameter and returns an object
+ * So, if you want to access the redux state in your component, then you
+ * define the map state to props function. It gets the redux state as a parameter
+ * which can be used to retrieve the appropriate state properties.
  */
 
 const mapStateToProps = state => {
     return {
-        numOfCakes: state.numOfCakes
+        numOfCakes: state.cake.numOfCakes
     }
 }
 
@@ -33,6 +36,7 @@ const mapStateToProps = state => {
 
 /**
  * This function gets the redux dispatch method as a parameter and returns an object
+ * So, it allows us to map action creators
  */
 const mapDispatchToProps = dispatch => {
     return {
