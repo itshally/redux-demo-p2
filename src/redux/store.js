@@ -2,14 +2,16 @@
 /*             This file uses the createStore() method from redux             */
 /* -------------------------------------------------------------------------- */
 
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import cakeReducer from './cake/CakeReducer'
 import rootReducer from './rootReducer'
+import thunk from 'redux-thunk'
+
 /**
  * The create store method accepts a reducer function as its parameter.
  */
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store
 
